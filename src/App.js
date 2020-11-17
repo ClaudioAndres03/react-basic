@@ -2,31 +2,24 @@ import React from 'react'
 import './App.css';
 
 
-function Helloworld() {
+function Helloworld(props) {
   return (
-    <div>Hello World</div>
+
+    <div id="hello">
+      <h3>{props.sub}</h3>
+      {props.mytext}
+    </div>
   );
 }
 
-const Apparow = () => {
-  <div> this is my component: <Helloworld /></div>
-}
-
-
-class Appclass extends React.Component {
-
-  render() {
-    return (
-      <div> this is my component: <Helloworld /></div>
-    )
-  }
-
-}
 
 function App() {
   return (
     <div className="App">
-      this is my component: <Helloworld />
+      this is my component:
+      <Helloworld mytext="Hello user 01" sub="tittle 01" />
+      <Helloworld mytext="Hello user 02" sub="tittle 02" />
+      <Helloworld mytext="Hello user 03" sub="tittle 03" />
     </div>
   );
 }
